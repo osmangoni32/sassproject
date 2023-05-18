@@ -1,0 +1,84 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    
+    @include clearfix;
+
+    [class^="col-"] {
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) +  #{$gutter-horizontal});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+
+}
+
+//withcustomgrid
+
+.grid-test{
+    max-width: 1140px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: .5rem 6rem;
+    //margin-left:1rem;
+
+    //@include clearfix;
+
+    [class^="col-"] {
+        background-color: orangered;
+        
+    }
+
+        //[class^="col-"] that start with col-
+        //[class*="col-"] that contain col-
+        .col-6-of-12{
+            grid-column: span 6;
+        } 
+        
+
+        .col-4-of-12{
+            grid-column: span 4;
+        } 
+        
+        .col-8-of-12{
+            grid-column: span 8;
+        } 
+        .col-3-of-12{
+            grid-column: span 3;
+        } 
+        .col-9-of-12{
+            grid-column: span 9;
+        } 
+    
+}
