@@ -130,31 +130,13 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 6rem) / 4) +  6rem); }
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
-
-.grid-test {
-  max-width: 1140px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: .5rem 6rem; }
-  .grid-test [class^="col-"] {
-    background-color: orangered; }
-  .grid-test .col-6-of-12 {
-    grid-column: span 6; }
-  .grid-test .col-4-of-12 {
-    grid-column: span 4; }
-  .grid-test .col-8-of-12 {
-    grid-column: span 8; }
-  .grid-test .col-3-of-12 {
-    grid-column: span 3; }
-  .grid-test .col-9-of-12 {
-    grid-column: span 9; }
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
   height: 95vh;
