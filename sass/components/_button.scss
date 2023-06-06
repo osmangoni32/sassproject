@@ -31,6 +31,14 @@
         transition: all .4s;
       }
     }
+    &--green{
+      background-color: $color-dgreen;
+      color: $color-white;
+      &::after{
+        background-color:$color-dgreen;
+        transition: all .4s;
+      }
+    }
     &::after{
       content: "";
       display: inline-block;
